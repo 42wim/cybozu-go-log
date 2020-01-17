@@ -58,7 +58,7 @@ type Logger struct {
 //    ErrorHandler: os.Exit(5) on EPIPE.
 func NewLogger() *Logger {
 	l := &Logger{
-		output: os.Stderr,
+		output: nil,
 	}
 	filename := filepath.Base(os.Args[0])
 	if runtime.GOOS == "windows" {
